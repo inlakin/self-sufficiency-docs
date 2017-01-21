@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-ng-app="FileManagerApp">
+<head>
+  <!--
+    * Angular FileManager v1.5.1 (https://github.com/joni2back/angular-filemanager)
+    * Jonas Sciangula Street <joni2back@gmail.com>
+    * Licensed under MIT (https://github.com/joni2back/angular-filemanager/blob/master/LICENSE)
+  -->
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>Les docs de l'autonomie</title>
+
+  <!-- third party -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bower_components/bootswatch/paper/bootstrap.min.css" />
+
+  <link href="dist/angular-filemanager.min.css" rel="stylesheet">
+  <script src="dist/angular-filemanager.min.js"></script>
+
+  <link rel="stylesheet" href="src/css/style.css">  
+  
+  <script type="text/javascript">
+    //example to override angular-filemanager default config
+    angular.module('FileManagerApp').config(['fileManagerConfigProvider', function (config) {
+      var defaults = config.$get();
+      config.set({
+        appName: 'angular-filemanager',
+        pickCallback: function(item) {
+          var msg = 'Picked %s "%s" for external use'
+            .replace('%s', item.type)
+            .replace('%s', item.fullPath());
+          window.alert(msg);
+        },
+
+        allowedActions: angular.extend(defaults.allowedActions, {
+          pickFiles: false,
+          pickFolders: false,
+        }),
+      });
+    }]);
+  </script>
+</head>
+
+<body class="ng-cloak">
+  <header>
+    <div class="title">
+      <h1>Les docs de l'autonomie</h1>
+      <p>Shared with <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span></p>
+    </div>
+  </header>
+  <section class="content">
+        <article class="intro">
+            <h2 class="article-title">Presentation</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, deserunt, sed saepe est obcaecati tempore dolore at fuga vitae quisquam, ut dolorem debitis repudiandae. Vero quod laboriosam iure, alias minima!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque maiores quam, dolor nemo perferendis ad labore, ex nihil nostrum qui delectus pariatur, nobis officiis molestias velit voluptatibus totam officia!
+                    </p>    
+                </div>
+            </div>
+        </article>
+    </section>
+  <section class="content">
+    <angular-filemanager></angular-filemanager>
+  </section>
+
+</body>
+</html>
