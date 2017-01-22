@@ -55,85 +55,32 @@ header {
     margin-bottom: 1em;
 }
 
-.wrapper{
-    position: absolute;
-}
-
-.overlay{
-    
-}
-
-.intro{
-
-}
-
-.search-content{
-
-}
-
-.search-bar{
-    text-align: center;
-    margin: auto;
-    height: 40px;
-    font-size: 22px;
-    border: none;
-    box-shadow: none;
-    border-bottom: 1px solid #0095DD;
-    border-radius: 0;
-}
-
-.search-bar:focus{
-    border-color: #5cb85c;
-    outline: 0;
-}
-
-.search-bar:hover{
-    box-shadow: 0 3px 8px 0 rgba(0,0,0,0,2), 0, 0, 0, 1px rgba(0,0,0,0,08);
-}
-.search-bar:
-
-.output-content{
-
-}
-
-.form-enhance{
-    height: 45px;   
-}
-
-.btn-search{
-    font-size: 22px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
-}
 
 .margin-top{
     margin-top: 2em;
 }
 
-.doc-output{
-    border: 1px solid lightgray;
-    font-size: 14px;
-    padding: 1em;
-    border-radius: 0.5em;
-    margin-bottom: 2em;
+i{
+  color: white;
+}
+footer{
+  background-color: #4B515D;
+  font-size: 1.7rem;
+  color: white;
+  text-align: center;
 }
 
-.doc-title{
-    text-align:center;
-}
-
-.doc-author{
-    font-weight: bold;
-}
-
-.doc-date{
+.fa-github:hover{
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
 
 }
-
-.doc-desc{
-
+.new-color{
+  color: #87D4F2;
 }
 
-.filemanager{
-    width: 75%;
-    margin:auto;
+.new-color:hover{
+ color: #33B4E5; 
+ box-shadow: 0 3px 8px 0 rgba(0,0,0,0,2), 0, 0, 0, 1px rgba(0,0,0,0,08);
+
 }
