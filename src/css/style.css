@@ -21,18 +21,18 @@ h3{
 
 header {
   background: 
-    linear-gradient(
+    /*linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ),
-    url("../../res/img/autumn.jpg");
+    ),*/
+    url("../../res/img/bg.jpeg");
   background-size: cover;
   height: 100vh;
 }
 
 .title {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -42,6 +42,7 @@ header {
 .title > h1{
   color: white;
 }
+
 
 .content{
     padding:6em;
@@ -55,12 +56,16 @@ header {
     margin-bottom: 1em;
 }
 
+.file-manager{
+  min-height: 500px;
+  border: 1px solid lightgray;
+}
 
 .margin-top{
     margin-top: 2em;
 }
 
-i{
+.fa-github{
   color: white;
 }
 footer{
@@ -84,3 +89,23 @@ footer{
  box-shadow: 0 3px 8px 0 rgba(0,0,0,0,2), 0, 0, 0, 1px rgba(0,0,0,0,08);
 
 }
+
+
+/* Surcharge des couleurs du file-manager */
+
+/*.navbar-inverse{
+  background-color: #7AA9B4;
+}
+
+i{
+  color:#7AA9B4;
+}
+
+.alert-warning{
+  background-color: #FFB4AA;
+}
+
+a{
+  color: #8894C0;
+}
+*/

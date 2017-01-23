@@ -146,9 +146,9 @@ class FileManager extends Ftp
 ExceptionCatcherJSON::register();
 $oResponse = new Response();
 $oFtp = new FileManager(array(
-    'hostname' => '',
-    'username' => '',
-    'password' => ''
+    'hostname' => '*',
+    'username' => '*',
+    'password' => '*'
 ));
 
 if (! $oFtp->connect()) {

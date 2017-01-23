@@ -29,7 +29,7 @@
     angular.module('FileManagerApp').config(['fileManagerConfigProvider', function (config) {
       var defaults = config.$get();
       config.set({
-        appName: 'angular-filemanager',
+        appName: "Les docs de l'autonomie",
         pickCallback: function(item) {
           var msg = 'Picked %s "%s" for external use'
           .replace('%s', item.type)
@@ -38,8 +38,22 @@
       },
 
       allowedActions: angular.extend(defaults.allowedActions, {
+          upload: false,
+          rename: false,
+          move: false,
+          copy: false,
+          edit: false,
+          changePermissions: false,
+          compress: false,
+          compressChooseName: false,
+          extract: false,
+          download: true,
+          downloadMultiple: true,
+          preview: true,
+          remove: false,
+          createFolder: false,
           pickFiles: false,
-          pickFolders: false,
+          pickFolders: false
       }),
   });
   }]);
@@ -65,7 +79,7 @@
         </div>
     </article>
 </section>
-<section class="content">
+<section class="content file-manager">
     <angular-filemanager></angular-filemanager>
 </section>
 
